@@ -1,0 +1,94 @@
+.container 
+  margin: 0 auto
+
+.exclusive-block
+  background-color: #f3f3f3
+  display: grid
+  .exclusive 
+      background-color: #ccc
+      width: 100%
+
+@media screen and (max-width: 400px)   
+  .exclusive-block 
+    $padding: (320px - 280px)/2
+    width: 320px-$padding * 2
+    padding: $padding
+    grid-gap: 10px
+    grid-template-rows: 112px 537px 189px 189px 401px 189px
+    grid-template-areas: "a b c d e f"
+    .item-1 
+      grid-area: a
+    .item-2 
+      grid-area: b
+    .item-3 
+      grid-area: c
+    .item-4 
+      grid-area: d
+    .item-5 
+      grid-area: e
+    .item-6 
+      grid-area: f
+
+
+@media screen and (max-width: 800px) and (min-width: 400px) 
+  $padding: (768px - 476px - 20px - 228px)/2;
+  .exclusive-block
+    width: 768px - $padding * 2
+    height: 674px - $padding * 2
+    padding: 30 $padding
+    grid-gap: 20px
+    grid-template-areas: "a a b" "c d b" "e d f"
+    .item-1 
+      grid-area: a
+    .item-2 
+      grid-area: b
+    .item-3 
+      grid-area: c
+    .item-4 
+      grid-area: d
+    .item-5 
+      grid-area: e
+    .item-6 
+      grid-area: f
+
+@media screen and (max-width: 1200px) and (min-width: 800px) 
+  $padding: (980px - 300px * 3 + 20px * 2)/2;
+  .exclusive-block
+    width: 980px - $padding * 2
+    height: 865px - $padding * 2
+    padding: 30 $padding
+    grid-gap: 20px
+    grid-template-areas: "a a b" "c d b" "e d f"
+    .item-1 
+      grid-area: a
+    .item-2 
+      grid-area: b
+    .item-3 
+      grid-area: c
+    .item-4 
+      grid-area: d
+    .item-5 
+      grid-area: e
+    .item-6 
+      grid-area: f
+
+@media screen and (min-width: 1200px) 
+  .exclusive-block
+    width: 1170px
+    height: 1000px
+    padding: 30px 0
+    grid-gap: 30px
+    grid-template-areas: "a a b" "c d b" "e d f"
+    .item-1 
+      grid-area: a
+    .item-2 
+      grid-area: b
+    .item-3 
+      grid-area: c
+    .item-4 
+      grid-area: d
+    .item-5 
+      grid-area: e
+    .item-6 
+      grid-area: f
+
