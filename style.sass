@@ -20,16 +20,16 @@
       background-color: #ccc
       width: 100%
 
-@media screen and (max-width: 500px)   
+@media screen and (max-width: 320px)   
   .exclusive-block 
     $padding: (320px - 280px)/2
-    min-width: 320px-$padding * 2
+    max-width: 320px   //-$padding * 2
     padding: $padding
     grid-gap: 10px
     grid-template-rows: 112px 537px 189px 189px 401px 189px
     grid-template-areas: "a" "b" "c" "d" "e" "f"
 
-@media screen and (max-width: 1020px) and (min-width: 500px) 
+@media screen and (max-width: 768px) and (min-width: 320px) 
   $padding: (768px - 476px - 20px - 228px)/2;
   .exclusive-block
     max-width: 768px - $padding * 2
@@ -37,20 +37,19 @@
     padding: 30 $padding
     grid-gap: 20px
     grid-template-areas: "a a b" "c d b" "e d f"
-    
 
-@media screen and (max-width: 1200px) and (min-width: 1020px) 
+@media screen and (max-width: 980px) and (min-width: 768px) 
   $padding: (980px - 300px * 3 + 20px * 2)/2;
   .exclusive-block
-    width: 980px - $padding * 2
+    max-width: 980px - $padding * 2
     height: 865px - $padding * 2
     padding: 30 $padding
     grid-gap: 20px
     grid-template-areas: "a a b" "c d b" "e d f"
 
-@media screen and (min-width: 1200px) 
+@media screen and (min-width: 980px) 
   .exclusive-block
-    width: 1170px
+    max-width: 1170px
     height: 1000px
     padding: 30px 0
     grid-gap: 30px
