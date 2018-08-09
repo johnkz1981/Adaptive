@@ -1,3 +1,4 @@
+$width-site: 1200px
 $item-height: 300px
 $mt: 3%
 
@@ -46,15 +47,39 @@ header
 .reviews
   display: flex
 
+.rw-box
+  width: $width-site / 3
+
 .text-reviews
   padding: 15px
   &__hending
-    margin-top: 2%
-    margin-bottom: 2%
+    margin-top: 4%
+    margin-bottom: 4%
 
 .box-image
   display: flex
-  justify-content: space-between
+  justify-content: center
   align-items: center
-  &__image
-    width: 200px
+  
+.image
+  width: 200px
+
+@media screen and (max-width: 720px)
+  .info
+    flex-direction: column
+
+  .item-1
+    width: 100%
+    margin-bottom: $mt
+
+  .parent-item-mini
+    display: flex
+    justify-content: space-between
+    width: 100%
+
+  .item-2,
+  .item-3
+    width: 48%
+
+  .product
+    width: 48%
