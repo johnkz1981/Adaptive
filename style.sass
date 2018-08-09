@@ -83,3 +83,39 @@ header
 
   .product
     width: 48%
+
+  .reviews
+    flex-direction: column
+    //width: 100%
+    
+  
+  .rw-box
+    width: 100%
+    display: flex
+    margin: 0
+    margin-bottom: $mt
+    padding-left: $mt
+    padding-right: $mt
+    box-sizing: border-box
+
+  .text-reviews
+    padding-right: 5%
+    padding-left: 5%
+    &__hending
+      text-align: center
+
+@media screen and (max-width: 375px)
+
+  .item-1,
+  .item-2,
+  .item-3
+    width: 90%
+    height: 200px
+    margin: 0 auto $mt
+    box-sizing: border-box
+
+  .parent-item-mini
+    flex-direction: column
+
+
+ 
