@@ -1,127 +1,31 @@
-$width-site: 1200px
-$item-height: 300px
-$mt: 3%
-
 .container
-  max-width: 1200px
-  margin: 0 auto
+  display: grid
+  grid-template-rows: 200px 500px 200px
 
-header
-  min-height: 100px
-  background-color: green
+.header
+  background-color: darkcyan
+  grid-column: span 12
 
-.info
-  display: flex
-  justify-content: space-between
-  margin-top: $mt
+.menu
+  background-color: darkblue
+  grid-column: span 3
 
-.item-1
-  width: 65%
-  height: $item-height
-  border: 1px solid #000
+.content
+  background-color: navajowhite
+  grid-column: span 9
 
-.parent-item-mini
-  width: 32%
-
-.item-2,
-.item-3
-  min-height: $item-height / 2 - $item-height / 100 * 5
-  border: 1px solid #000
-
-.item-2
-  margin-bottom: $item-height / 100 * 10
-
-.box-product
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-between
-  margin-top: $mt
-  &__item
-    margin-bottom: $mt
-
-.product
-  width: 31%
-  height: 300px
+.footer
   background-color: #ccc
+  grid-column: span 12
 
-.reviews
-  display: flex
+@media screen and (max-width: 768px)
 
-.rw-box
-  width: $width-site / 3
+  .header
+    grid-column: span 6
 
-.text-reviews
-  padding: 15px
-  &__hending
-    margin-top: 4%
-    margin-bottom: 4%
+  .menu
+    grid-column: span 6
 
-.box-image
-  display: flex
-  justify-content: center
-  align-items: center
+  .content
+    grid-column: span 12
   
-.image
-  width: 200px
-
-@media screen and (max-width: 720px)
-  .info
-    flex-direction: column
-
-  .item-1
-    width: 100%
-    margin-bottom: $mt
-
-  .parent-item-mini
-    display: flex
-    justify-content: space-between
-    width: 100%
-
-  .item-2,
-  .item-3
-    width: 48%
-
-  .product
-    width: 48%
-
-  .reviews
-    flex-direction: column
-    //width: 100%
-    
-  
-  .rw-box
-    width: 100%
-    display: flex
-    margin: 0
-    margin-bottom: $mt
-    padding-left: $mt
-    padding-right: $mt
-    box-sizing: border-box
-
-  .text-reviews
-    padding-right: 5%
-    padding-left: 5%
-    &__hending
-      text-align: center
-
-@media screen and (max-width: 375px)
-
-  .item-1,
-  .item-2,
-  .item-3
-    width: 90%
-    height: 200px
-    margin: 0 auto $mt
-    box-sizing: border-box
-
-  .parent-item-mini
-    flex-direction: column
-
-  .product
-    width: 90%
-    margin: 0 auto $mt
-
-  .rw-box
-    display: block
-
- 
